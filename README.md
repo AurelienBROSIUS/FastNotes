@@ -9,7 +9,7 @@ and open FastNotes.html
 
 
 **********************************************************************
-		                		ATTENTION /!\ WARNING
+		                		 ATTENTION /!\ WARNING
 **********************************************************************
 
 When you launch the web page and create a task/note, this is stored
@@ -22,5 +22,5 @@ Path for firefox : "C:\Users\%username%\AppData\Roaming\Mozilla\
 Firefox\Profiles\YOUR_FIREFOX_PROFILE_NAME\webappsstore.sqlite"
 
 **********************************************************************
-		                	          		END
+		                	          	    END
 **********************************************************************
