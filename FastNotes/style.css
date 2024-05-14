@@ -1,0 +1,227 @@
+/* MISE EN FORME GENERAL DE LA PAGE */
+
+body, html {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+	min-width: 240px;
+	
+	/*background-image: url(cool-background.svg);
+	 background-position: center center;
+	 background-repeat: no-repeat;
+	 background-attachment: fixed;
+	 background-size: cover;
+	 */
+}
+
+/* Bouton standard */
+
+.button {
+	cursor: pointer;
+	font-size: 14px;
+	border: solid grey 1px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2);
+    position: relative;
+	margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 7px;
+	min-width: 3.5em;
+    max-width: 120px;
+}
+
+.button:hover {
+    background-color: #E5E5E5;
+}
+
+.button:active {
+    background-color: #F5F5F5;
+}
+
+/* Slider On/OFF */
+.switch {
+    position: relative;
+    width: 52px;
+    height: 22px;
+    margin-bottom: 5px;
+    margin-right: 2px;
+	margin-top: 5px;
+}
+
+.switch input {display:none;}
+
+.slideButton {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	border-radius: 34px;
+}
+
+.slideButton:before {
+	position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slideButton {
+	background-color: #2196F3;
+}
+
+input:focus + .slideButton {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slideButton:before {
+	-webkit-transform: translateX(28px);
+	-ms-transform: translateX(28px);
+	transform: translateX(28px);
+}
+
+/* Menu de reglages */
+
+.reglagesMenu {
+	position: fixed;
+	z-index: 999;
+	background-color: #FFF;
+	border-radius: 5px;
+	text-align: center;
+	min-width: 200px;
+	width: 50%;
+	padding: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.reglage-content {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.1em;
+	font-family: calibri light;
+	
+}
+
+@media screen and (min-width: 500px) {
+	.reglage-content {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+
+.reglages-button {
+	display: flex;
+	line-height: 1.2em;
+	justify-content: space-around;
+	bottom: 10px;
+	width: -webkit-fill-available;
+}
+
+.reglages-button a {
+	cursor: pointer;
+	width: calc(20% + 1em);
+	border-radius: 5px;
+	background-color: #f1f1f1;
+	box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2);
+	position: relative;
+	padding: 5px;
+	max-width: 120px;
+}
+
+.colorThemeSelector {
+	height: 22px;
+	border: 0;
+	margin-top: 2px;
+	background: none;
+	width: 58px;
+	padding: 0;
+	margin-left: 5px;
+}
+
+/* Arriere plan grisé */
+.greyScreen {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: .4;
+	background-color: #222;
+}
+
+.input{
+	outline: none;
+}
+
+/*Rend la zone inselectionnable*/
+.unselectable {
+	-webkit-user-select: none; 
+    -webkit-touch-callout: none; 
+    -moz-user-select: none; 
+    user-select: none;
+}
+
+/* Sous titre */
+.subTitile {
+	text-align: center;
+	font-family: calibri light;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* Specifique au petits ecrans */
+@media screen and (max-width: 600px) {
+	.subTitile { margin-top: 0.5em; }
+}
+
+/* Permet le bon placement du footer  */
+.page-wrap {
+	min-height: 100%;
+	/* Egale a la taille du footer */
+	margin-bottom: -18px; 
+}
+
+/* Permet le bon placement du footer  */
+.page-wrap:after {
+	content: "";
+	display: block;
+	height: 38px; 
+}
+
+/* Mise en forme du footer */
+.footer {
+	font-family: calibri light;
+	font-size: 13px;
+	height: 18px;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+	background-color: #444;
+	color: white;
+}
+
+/* Marges des div du footer */
+.footer div {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+/* Centre les enfants de la classe footer */
+@media screen and (max-width: 370px) {
+	.footer {
+		justify-content: center;
+		height: auto;
+}
+

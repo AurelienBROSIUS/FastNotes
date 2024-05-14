@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--Par BROSIUS Aurélien-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>FastNotes</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style top-bar.css">
+		<link rel="stylesheet" href="style items.css">
+		<script src="FastNotes.js"></script>
+		<script src="Items.js"></script>
+		<link rel="shortcut icon" type="images/x-icon" href="FastNotes.ico" />
+	</head>
+
+	<body>
+		<div class="page-wrap">
+			<!-- Barre de navigation -->
+			<div class="topnav unselectable" id="topBar">
+				<a href="#FN" class="logoIconContainer"><img src="FastNotes.png" class="logoTopbar unselectable" alt="Logo FN" href="#FN"></a>
+				<a target="_blank" rel="noopener noreferrer" href="">You can add shortcut here !</a>
+				<a target="_blank" rel="noopener noreferrer" href=""></a>
+				<a id="btnDateClicked"></a>
+				<a class="reglagesPage" onclick="reglages()">
+					<img src="Gear-128-black.png" class="gearLogoBlack" alt="Reglages">
+					<img src="Gear-128-white.png" class="gearLogoWhite" alt="Reglages"></a> 
+			</div>
+		
+			<!-- Ajout d'item -->
+			<div class="createNewItem">
+				<!-- Crée une nouvelle tâche -->
+				<div class="newItem">
+					<a class="button" onclick="buttonTaskClick()" id="btnTaskText">Ajouter une tâche</a>
+					<div id="taskText">
+						<a><input type="text" class="input" id="taskName" placeholder="Nom de la tâche"></a>
+						<a class="button" id="taskSubmit" onclick="submitNewItem('task')">Sauvegarder</a>
+					</div>
+				</div>
+				<!-- Crée une nouvelle note -->
+				<div class="newItem">
+					<a class="button" onclick="buttonNoteClick()" id="btnNoteText">Ajouter une note</a>
+					<div id="noteText">
+						<a><input type="text" class="input" id="noteName" placeholder="Nom de la note"></a>
+						<a class="button" id="noteSubmit" onclick="submitNewItem('note')">Sauvegarder</a>
+					</div>
+				</div>
+			</div>
+		
+		
+			<!-- Sous titre -->
+			<div class="subTitile" >
+				<a>TACHES</a>
+			</div>
+		
+			<!-- Liste des tâches -->
+			<ul class="tableau-liste"  id="taskTableCell">
+				<!-- Les cellules ajoutées apparaissent ici -->
+			</ul>
+		
+		
+			<!-- Sous titre -->
+			<div class="subTitile">
+				<a>NOTES</a>
+			</div>
+		
+			<!-- Liste des notes -->
+			<ul class="tableau-liste"  id="noteTableCell">
+				<!-- Les cellules ajoutées apparaissent ici -->
+			</ul>
+			
+			<div class="tableau-liste" >
+				<a>Test <input class="test" id="testbar" type="text" onclick="buttonTaskClick()" placeholder="> -i (info)"></a>
+			</div>
+			
+		
+		</div>
+		
+		<footer class="footer">
+			<div class="infoFooter"><a>Compatiblie avec Firefox, Chrome et Brave !</a></div>
+			<div class="copyright"><a>© 2021 BROSIUS Aurélien</a></div>
+		</footer>
+		<!-- Reglages -->
+		
+		
+		
+	</body>
+	
+
+</html>

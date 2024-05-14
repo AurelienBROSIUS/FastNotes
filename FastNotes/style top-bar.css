@@ -1,0 +1,100 @@
+/* MISE EN FORME DE LA BARRE DE NAVIGATION */
+
+/* le conteneur (fond) du logo SIS */
+.logoIconContainer {
+	width: 50px;
+	background-color: white;
+}
+
+/* le logo SIS */
+.logoTopbar {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    width: 40px;
+    height: auto;
+}
+
+/* Barre de navigation */
+.topnav {
+	overflow: hidden;
+	background-color: #1f1f1f;
+}
+
+/* Elements de la barre sauf reglages */
+.topnav a:not(.reglagesPage) {
+	float: left;
+	height: 23px;
+	color: #f2f2f2;
+	padding: 12px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+/* Lorsqu'on passe la souris sur les elements */
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* Section des Reglages */
+.reglagesPage {
+	float: right;
+	height: 23px;
+	padding: 12px 16px;
+	text-decoration: none;
+}
+
+/* Change le logo quand on le survole */
+.reglagesPage:hover .gearLogoBlack { display: flex; }
+.reglagesPage:hover .gearLogoWhite { display: none; }
+
+.gearLogoBlack {
+	display: none;
+	margin-top: 1px;
+	width: 20px;
+	height: auto;
+}
+
+.gearLogoWhite {
+	margin-top: 1px;
+	width: 20px;
+	height: auto;
+}
+
+/* Mise en forme de chaques cellules */
+.shortcut-topnav {
+	background-color: #1f1f1f;
+    min-width: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    list-style-type: none;
+    transition: 0.15s;
+    float: left;
+    color: #f2f2f2;
+    text-decoration: none;
+	#backface-visibility: hidden; /* Empeche le flou lors cde l'animation */
+}
+
+
+/* Masque les enfants sauf le premier de la barre de navigation */
+@media screen and (max-width: 650px) {
+  .topnav a:not(:first-child):not(:nth-child(2)) {display: none;}
+  .topnav a:nth-child(2) {
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	width: calc(100% - 114px);
+  }
+}
+
+/* Tableau des raccourci */
+.tableau-raccourci {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding-left: inherit;
+	font-size: 14px;
+}

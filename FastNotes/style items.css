@@ -1,0 +1,150 @@
+/* MISE EN FORME DU TABLEAU DES ITEMS */
+
+/* Crée une nouvelle tâche  */
+.createNewItem {
+	margin-top: 2em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-left: 9%;
+	margin-right: 9%;
+	text-align: center;
+	line-height: 2.5em;
+}
+
+/* Centre les boutons d'ajout */
+@media screen and (max-width: 600px) {
+	.createNewItem { justify-content: space-around; }
+}
+
+/* Masque le contennu des boutons d'ajout */
+#taskText { display: none; }
+#noteText { display: none; }
+
+
+/* Tableau des tâches */
+.tableau-liste {
+	display: flex;
+	line-height: 2.5em;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding-left: inherit;
+	font-size: 14px;
+}
+
+
+/* Mise en forme de chaques cellules */
+.cellule-tableau-liste {
+	min-width: 190px;
+	width: calc(100% * (1/5) - 1px);
+	margin-left: 2px;
+	margin-right: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 4px;
+	border-radius: 5px;
+	text-align: center;
+	list-style-type: none;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	border-right: 1px solid rgba(0,0,0,.1);
+	transition: 0.15s;
+	backface-visibility: hidden; /* Empeche le flou lors cde l'animation */
+}
+
+/* Mise en forme spécifique au notes */
+.cellule-tableau-liste.note {
+	width: calc(100% * (10/24) - 1px);
+}
+
+/* Mise en forme spécifique au notes */
+.cellule-tableau-liste.note textarea {
+	
+	background-color: #2f383a;
+}
+
+/* Mise en forme de la zone de texte */
+textarea {
+	width: 100%;
+	height:auto;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 5px;
+	font-size: 14px;
+	text-align: center;
+	resize: none;
+	margin-top: 5px;
+	margin-right: 27px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Contennu de la cellule */
+.dropdown {
+	height:100%;
+	position: relative;
+}
+
+/* Mise en forme de la partie caché de la cellule */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	text-align: center;
+	border-radius: 7px;
+	line-height: 1.8em;
+	margin-bottom: 5px;
+	justify-content: space-between;
+	min-width: 170px;
+	bottom: 0;
+	align-content: center;
+	width: 100%;
+}
+
+/* Mise en forme du contenu du dropdown */
+.dropdown-content a {
+	cursor: pointer;
+	width: 40%;
+	border-radius: 5px;
+	background-color: #f1f1f1;
+	box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2);
+}
+
+/* Mise en forme des boutons lorsque l'on passe la souris  */
+.dropdown-content a:hover { background-color: #ddd; }
+
+/* Change la couleur de la cellule lorsque l'on passe la souris dessus */
+.cellule-tableau-liste:hover {
+	background-color: red;
+	#width: 102%;
+    #height: 102%;
+    #font-size: 102%;
+	transform: scale(1.02);
+}
+
+/* Affiche le contenu caché du dropdown */
+ .cellule-tableau-liste:hover .dropdown-content { display: flex; }
+ 
+ .cellule-modify-centered {
+	top: 35%;
+    bottom: 35%;
+    position: fixed;
+    z-index: 1;
+ }
+ 
+
+/* Jaune #FAF04F */
+/* Turquoise #00FB98 */
